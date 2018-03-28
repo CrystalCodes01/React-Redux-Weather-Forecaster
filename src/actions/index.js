@@ -9,10 +9,12 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 // EXPORT VAR AND CREATE ACTION
 export function fetchWeather (city) {
   const url = `${ROOT_URL}&q=${city},us`;
+  // RETURN PROMISE
   const request = axios.get(url);
 
   return {
     type: FETCH_WEATHER,
+  // RETURN PROMISE
     payload: request
   };
 }
